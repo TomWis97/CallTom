@@ -47,7 +47,7 @@ CREATE TABLE `calls` (
 When everything is set up, open CallTom with your webbrowser. Follow the directions.
 
 ## Thanks to
-I want to thank [subtlepatterns.com](www.subtlepatterns.com) for the backgrounds.
+I want to thank [subtlepatterns.com](http://www.subtlepatterns.com) for the backgrounds.
 
 ## Want to improve CallTom?
 If you spot a problem with CallTom, feel free to create an issue or do a pull request! Thanks!
