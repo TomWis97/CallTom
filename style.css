@@ -1,0 +1,183 @@
+@import url(//fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Condensed:400,300);
+
+/* @media (min-width: 450px;) {
+	#container {
+		max-width: 450px;
+	}
+} */
+
+/* Basic lay-out. */
+body {
+	background: #3b3b3b url("background.png");
+	margin-top: none;
+	font-family: Roboto, sans-serif;
+}
+
+#container {
+	width: 100%;
+	max-width: 450px;
+	margin: auto;
+}
+
+#header {
+	background: url("main.png");
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 10px;
+	margin-bottom: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 2px solid #555;
+	padding: 5px;
+}
+
+#main {
+	margin: 10px;
+	margin-top: 0px;
+	background: url("main.png");
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 5px;
+}
+
+/* Fonts and stuff */
+#headertitle {
+	font-size: 3em;
+	font-weight: 400;
+	display: block;
+}
+
+#headerpage {
+	font-weight: 300;
+	display: block;
+	color: #888;
+}
+
+p {
+	margin: 0px;
+	font-weight: 300;
+}
+
+.title {
+	margin: 0px;
+	font-weight: 400;
+	margin-top: 10px;
+}
+
+/* Table */
+table {
+	margin: 5px;
+}
+
+th {
+	text-align: right;
+	border-right: 1px solid grey;
+	padding-right: 5px;
+	font-weight: 400;
+}
+
+td {
+	font-weight: 300;
+}
+
+/* Status box */
+.statusmsg {
+	border: 1px solid #8a8a8a;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+}
+
+.remsg {
+	border: 1px solid #8a8a8a;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+}
+
+.noreply {
+	background-color: #FFC9C9;
+}
+
+.seen {
+	background-color: #C9FFC9;
+}
+
+.asap {
+	background-color: #7AFF95;
+}
+
+.min {
+	background-color: #D3FF7A;
+}
+
+.other {
+	background-color: #A1A1FF;
+}
+
+/* Input thingies. */
+input {
+	display: block;
+	width: calc(100% - 4px);
+	margin: 0px;
+	padding: 2px;
+	border: 0px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-size: 2em;
+	-webkit-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.75);
+	border-radius: 5px;
+	font-family: Roboto, sans-serif;
+}
+
+select {
+	font-size: 2em;
+	width: 100%;
+	border-radius: 5px;
+	font-family: Roboto, sans-serif;
+}
+
+.submitbutton {
+	background-color: #0BE30B;
+	font-family: Roboto, sans-serif;
+	font-size: 2em;
+	border: 1px solid #04B004;
+	color: #FFFFFF;
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+/* Loading animation */
+.spinner {
+  width: 80px;
+  height: 80px;
+  background-color: #0000CC;
+  margin: 20px auto;
+  -webkit-animation: sk-rotateplane 3s infinite ease-in-out;
+  animation: sk-rotateplane 3s infinite ease-in-out;
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
