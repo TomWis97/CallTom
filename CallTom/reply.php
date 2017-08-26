@@ -51,36 +51,36 @@ AND calls.callid = :cid');
 	
 	pageheader(0, "Antwoorden");
 ?>
-<p>Send your reply here.</p>
+<p>Verstuur hier je antwoord.</p>
 <p class="title">Details:</p>
 <table>
 	<tr>
-		<th>Reason</th><td><?php echo(converttypetostring($callinfo[0]['type']));?></td>
+		<th>Reden</th><td><?php echo(converttypetostring($callinfo[0]['type']));?></td>
 	</tr>
 	<tr>
-		<th>Message</th><td><?php 
+		<th>Bericht</th><td><?php 
 		$msg = $callinfo[0]['message'];
 		if($msg == "") {
-			$msg = "*No Message*";
+			$msg = "*Geen bericht*";
 		}
 		echo($msg);
 		?></td>
 	</tr>
 	<tr>	
-		<th>Time</th><td><?php echo(date('j-n-Y G:i.s', $callinfo[0]['time'])); echo(" ("); echo(time() - $callinfo[0]['time']); echo (' sec. ago)')?></td>
+		<th>Tijd</th><td><?php echo(date('j-n-Y G:i.s', $callinfo[0]['time'])); echo(" ("); echo(time() - $callinfo[0]['time']); echo (' sec. geleden)')?></td>
 	</tr>
 	<tr>	
-		<th>By</th><td><?php echo($callinfo[0]['username']); ?></td>
+		<th>Door</th><td><?php echo($callinfo[0]['username']); ?></td>
 	</tr>
 	<tr>	
-		<th>From</th><td><?php echo($callinfo[0]['devicename']); ?></td>
+		<th>Vanaf</th><td><?php echo($callinfo[0]['devicename']); ?></td>
 	</tr>
 </table>
-<p class="title">Answer:</p>
+<p class="title">Antwoord:</p>
 <form method="post">
 	<button class="submitbutton" type="submit" name="reply" value="2">ASAP</button>
-	<button class="submitbutton" type="submit" name="reply" value="3">Within 5 minutes</button>
-	<button class="submitbutton" type="submit" name="reply" value="4">Other</button>
-	<p class="title">Extra message (Optional)</p>
+	<button class="submitbutton" type="submit" name="reply" value="3">Binnen 5 minuten</button>
+	<button class="submitbutton" type="submit" name="reply" value="4">Anders</button>
+	<p class="title">Extra tekst (Optioneel)</p>
 	<input type="text" name="text">
 </form>

@@ -1,16 +1,15 @@
 <?php
-	/*   Documentation: Cause
-		1 = Food
-		2 = IT help
-        //TODO: Again, better translation.
-		3 = Talk to us!
+	/*   Documentatie: Cause
+		1 = Voedsel
+		2 = IT hulp
+		3 = Contact gewenst
 	*/
-	/*   Documentation: Response
-		0 = No response
-		1 = Read
+	/*   Documentatie: Response
+		0 = Geen response
+		1 = Geopend
 		2 = ASAP
-		3 = Within 5 minutes
-		4 = Other
+		3 = Binnen 5 minuten
+		4 = Anders
 	*/
 	require('functions.php');
 	checkdevice();
@@ -48,13 +47,12 @@
 		header('Location: wait.php?callid=' . $callid);
 		die('Redirecting...');
 	}
-	pageheader(0, "Choosing cause")
+	pageheader(0, "Reden kiezen")
 ?>
-<p>Enter the cause by pressing the corresponding button. If you want to add text (optional), enter your message before pressing the button.</p>
+<p>Geef de reden aan door op de knop te drukken. Eventueel kan er tekst worden toegevoegd (doe dit eerst).</p>
 <form method="post">
-	<button class="submitbutton" type="submit" name="cause" value="1">Food</button>
-	<button class="submitbutton" type="submit" name="cause" value="2">IT help</button>
-    <!-- TODO: Better translation. -->
+	<button class="submitbutton" type="submit" name="cause" value="1">Eten/drinken</button>
+	<button class="submitbutton" type="submit" name="cause" value="2">IT hulp</button>
 	<button class="submitbutton" type="submit" name="cause" value="3">Contact gewenst</button>
 	<p class="title">Extra tekst (Optioneel)</p>
 	<input type="text" name="text">

@@ -100,18 +100,18 @@
 		$formattedtime = date('H:i.s \(D\)', $time);
 		$type = converttypetostring($typeid);
 		if(empty($msg)) {
-			$newmsg = "*No message*";
+			$newmsg = "*Geen bericht*";
 		}
 		else {
 			$newmsg = $msg;
 		}
-		$body = "Message: $newmsg
-By: $sender
-Time: $formattedtime";
+		$body = "Bericht: $newmsg
+Door: $sender
+Tijd: $formattedtime";
 		$url = $webroot . 'reply.php?id=' . $callid;
-		$title = "Called! $username: $type";
+		$title = "Geroepen! $username: $type";
 		if($remind == true) {
-			$title = "Reminder: " . $title;
+			$title = "Herinnering: " . $title;
 		}
 		pushlink($title, $body, $url);
 	}
@@ -157,14 +157,13 @@ Time: $formattedtime";
 	function converttypetostring($type) {
 		switch($type) {
 			case 1:
-				return "Food";
+				return "Voedsel";
 				break;
 			case 2:
-				return "IT Help";
+				return "IT Hulp";
 				break;
 			case 3:
-                //TODO: Find better translation. Dutch: "Contact gewenst"
-				return "Talk to us!";
+				return "Contact gewenst.";
 				break;
 			default:
 				return false;

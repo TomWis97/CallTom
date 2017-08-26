@@ -1,9 +1,5 @@
 <?php
 	require("functions.php");
-	if(isset($_COOKIE['call_devid']) && validatedeviceid($_COOKIE['call_devid'])) {
-		header("Location: removedevice.php");
-		die("Redirecting...");
-	}
 	
 	if(isset($_POST['devicename']) && $_POST['devicename'] == "") {
 		die('You need to enter a device name.');
@@ -58,13 +54,11 @@
 		$st_deviceadd->execute();
 		createcookie($deviceid);
 		header("Location: new.php");
-		die('Redirecting...');
 	}
-	pageheader(0,'Apparaat registreren');
+	
 ?>
-<p>Voordat u kunt beginnen, moet u eerst laten weten wie u bent, en welk apparaat dit is. Kies een bestaande naam, of vul een nieuwe in. Vul ook de naam van dit apparaat in.</p>
+
 <form method="post">
-	<p class="title">Gebruiker</p>
 	<select name="selecteduser">
 	<?php
 		if($currentusers == 0) {
@@ -76,10 +70,7 @@
 		}
 	?>
 	</select>
-	<input type="text" name="username" placeholder="Gebruikersnaam" <?php if($currentusers == 0) { echo("required"); } ?>>
-	<p class="title">Apparaat</p>
+	<input type="text" name="username" placeholder="Nieuwe gebruikersnaam" <?php if($currentusers == 0) { echo("required"); } ?>>
 	<input type="text" name="devicename" placeholder="Apparaatnaam" required>
-	<button type="submit" class="submitbutton">Voeg dit apparaat toe.</button>
+	<button id="submitbutton" type="submit" class="customButton">Voeg dit apparaat toe.</button>
 </form>
-
-<?php pagefooter(); ?>

@@ -1,16 +1,16 @@
 <?php
 	// Database settings
-	$dbpdodsn     = 'mysql:host=localhost;dbname=DBNAME;charset=utf8';
-	$dbuser       = 'DBUSERNAME';
-	$dbpassword   = 'DBPASSWORD';
+	$dbpdodsn     = 'mysql:host=localhost;dbname=calltom;charset=utf8';
+	$dbuser       = 'calltom';
+	$dbpassword   = 'Pa$$w0rd';
 	
 	// Settings
-	$headertitle  = 'Call Tom!';
+	$headertitle  = 'Roep Tom!';
 	
 	// Pushbullet related stuff
-	$pbapikey     = 'PUSHBULLET API KEY HERE';
+	$pbapikey     = 'pushbulletkey';
 
 	// Webserver settings
 	date_default_timezone_set('Europe/Amsterdam');
-	$webroot = "http://YOURSERVER-IP-HERE/calltom/" // The directory where this webapp is located.
+	$webroot = "http://f.qd.n/calltom/" // The directory where this webapp is located.
 ?>

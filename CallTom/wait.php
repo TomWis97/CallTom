@@ -28,20 +28,20 @@
 	switch($response[0]['response']) {
 		case 0:
 			$statusclass = "noreply";
-			$statusmsg = "No reply (yet).";
+			$statusmsg = "(Nog) geen reactie.";
 			break;
 		case 1:
 			$statusclass = "seen";
-			$statusmsg = "Seen. No reply yet.";
+			$statusmsg = "Gezien. Nog geen antwoord.";
 			break;
 		default:
 			header("Location: end.php?callid=" . $_GET['callid']);
 			die('Redirecting...');
 	}
 	
-	pageheader(3, "Waiting for reply.");
+	pageheader(3, "Wachten op een reactie");
 ?>
-<p>Waiting for a reply...</p>
+<p>Even wachten op een reactie...</p>
 <p class="title">Status:</p>
 <div class="statusmsg <?php echo($statusclass);?>"dfdf>
 <p><?php echo($statusmsg); ?></p>

@@ -17,30 +17,30 @@
 	$msg = $response[0]['remsg'];
 	switch($reply) {
 		case 2:
-			$retxt = '"I\'ll be there ASAP!"';
+			$retxt = '"Ik kom er zo snel mogelijk aan!"';
 			$reclass = "asap";
 			break;
 		case 3:
-			$retxt = '"I\'ll be there within 5 minutes."';
+			$retxt = '"Ik kom er binnen 5 minuten aan!"';
 			$reclass = "min";
 			break;
 		case 4:
-			$retxt = '"Other reply."';
+			$retxt = '"Andere reactie."';
 			$reclass = "other";
 			break;
 		default:
-			die('Invalid reply code !!1');
+			die('Huh?! Dit snap ik niet!111');
 	}
 	
 	
-	pageheader(0, 'Reply received');
+	pageheader(0, 'Antwoord ontvangen');
 ?>
-<p>The reply is displayed below. If there's a message attached, it will also be displayed here.</p>
-<p class="title">Reply:</p>
+<p>Hieronder staat de reactie. Als er een bericht bij is gestuurd, staat deze er ook bij.</p>
+<p class="title">Reactie:</p>
 <div class="statusmsg <?php echo($reclass);?>"><?php echo('<p>' . $retxt . '</p>'); ?></div>
 <?php
 	if($msg != "") {
-		echo('<p class="title">Attached message:</p>
+		echo('<p class="title">Toegevoegd bericht:</p>
 		<p class="remsg">' . $msg . '</p>');
 	}
 	pagefooter();
